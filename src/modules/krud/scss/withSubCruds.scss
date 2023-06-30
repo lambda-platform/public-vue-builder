@@ -1,0 +1,48 @@
+.crud-tabs{
+    .dataform-header{
+        display: none;
+    }
+    height: calc(100vh - 51px);
+    .ivu-tabs-tabpane{
+        height: calc(100vh - 97px);
+    }
+    .sub-cruds{
+        padding: 15px 30px;
+        height: 100%;
+        overflow-y: auto;
+        .sub-descriptiom{
+            padding: 20px 24px;
+            border: 1px solid #DFE6E9;
+        }
+        .crud-section{
+            border: 1px solid #DFE6E9;
+            padding: 20px 24px 10px 24px;
+            min-height: 100px;
+            margin-top: 30px;
+            legend{
+                margin-top: -33px;
+                background-color: white;
+                padding: 0 10px;
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+            .sub-crud{
+                .sub-title{
+                    display: flex;
+                    button{
+                        margin-left: 30px;
+                    }
+                    margin-bottom: 15px;
+                }
+                .sub-grid{
+                    height: 30vh;
+
+                    .dg .dg-body .dg-footer{
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

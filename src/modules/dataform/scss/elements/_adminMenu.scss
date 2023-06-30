@@ -1,0 +1,14 @@
+.data-clear-icon {
+    background: #FFFFFF;
+    visibility: hidden;
+}
+
+.ivu-input-inner-container:hover {
+    .data-clear-icon {
+        visibility: visible;
+    }
+}
+
+.menu-icon-preview {
+    font-size: 20px;
+}

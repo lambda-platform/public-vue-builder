@@ -1,0 +1,115 @@
+#menu-tree {
+    max-width: 100%;
+}
+
+#menu-tree {
+    ul {
+        margin: 20px 0 0 0;
+        padding: 0;
+        list-style-type: none;
+        color: #000;
+        border: 1px solid #fff;
+        li.menu-tree-item {
+            list-style-type: none;
+            color: #000;
+            border: none;
+            padding-left: 3px;
+            margin: 5px 0 5px 0;
+            background-color: #404850;
+            transition: all 0.5s ease-out;
+            height: auto;
+        }
+
+    }
+
+    ul, #menuTree {
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .extended {
+        height: 250px;
+    }
+
+    .menu-tree-item div.sortDiv {
+        padding: 2px;
+        background-color: #ededed;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        cursor: default;
+        min-height: 43px;
+        line-height: 37px;
+    }
+
+    .menu-control {
+        position: absolute;
+        right: 0;
+        top: 0;
+        min-height: 26px;
+        line-height: 26px;
+        margin: 0 10px;
+        padding: 7px;
+    }
+
+    .advanced {
+        border-top: dotted 1px #dedede;
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        margin-top: 15px;
+        h4 {
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-right: 20px;
+        }
+        .ivu-checkbox-wrapper {
+            margin-right: 10px;
+        }
+    }
+}
+
+.sortDiv {
+    button {
+        display: inline-block;
+        margin: 0 1px;
+    }
+    .buttons {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+}
+
+.menu-title {
+    max-width: 80% !important;
+    display: inline-block;
+    padding-left: 5px;
+    .ivu-checkbox-wrapper {
+        margin: 0;
+    }
+}
+
+.menu-icon {
+    max-width: 70px;
+    display: inline-block;
+    padding-left: 5px;
+    svg{
+        [fill]:not([fill="none"])  {
+            fill: #3699FF;
+        }
+    }
+
+}
+
+.menu_types {
+    max-width: 120px !important;
+}
+
+.user-data {
+    background: #fff;
+    width: 100%;
+    height: auto;
+    min-height: 210px;
+    padding: 10px 15px;
+}

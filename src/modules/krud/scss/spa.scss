@@ -1,0 +1,34 @@
+$primary: #0288D1;
+$secondary: #cedce4;
+$bg-hover: #e8ebed;
+$title-color: #7b929e;
+$white: #ffffff;
+
+.spa {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    min-width: 768px;
+    overflow: hidden;
+
+    .crud-page {
+        border-radius: 5px;
+        &-body {
+            .dg-flex {
+                width: 100%;
+                display: flex;
+                .data-grid {
+                    flex: 1;
+                    position: relative;
+                }
+                .data-form {
+                    display: flex;
+                    border-top: solid 1px #dedede;
+                    background: #ffffff;
+                    padding-bottom: 100px;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}

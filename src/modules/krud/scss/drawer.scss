@@ -1,0 +1,66 @@
+
+#drawer-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #fff;
+    #left_panel{
+        height: 100%;
+        flex: 1;
+    }
+    #right_panel {
+        padding-left: 4px;
+        height: 100%;
+        position: relative;
+        box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+        transition:  transform 0.3s ease, width 0.3s ease;
+        width: 0;
+        flex: 0 0 0;
+        padding-top: 3px;
+
+        .action-close{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        .dataform-header {
+            //position: absolute;
+            //width: 100%;
+            //left: 0px;
+            //top: 0;
+            display: none;
+        }
+        .dataform{
+            .dataform-header{
+                display: none;
+            }
+
+        }
+        .resizer {
+
+                background-color: #fff;
+                position: absolute;
+                left: 0;
+                width: 3px;
+                height: 100%;
+                cursor: ew-resize;
+
+                &:hover, &:focus{
+                    background-color: #60bff3;
+                }
+            }
+
+    }
+
+
+    .show-panel{
+        transform: translateX(0%);
+    }
+    .hide-panel{
+        //flex: 0 0 0 !important;
+        //width: 0 !important;
+        transform: translateX(100%);
+
+    }
+}
+

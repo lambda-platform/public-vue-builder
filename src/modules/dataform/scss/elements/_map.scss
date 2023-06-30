@@ -1,0 +1,16 @@
+.lambda-map-wrapper {
+    .lambda-map {
+        width: 100%;
+        height: 300px;
+        position: relative;
+    }
+
+    .lambda-lat-lng {
+        max-width: 300px;
+        display: flex;
+        margin-bottom: 10px;
+        .ivu-input-wrapper:first-child {
+            margin-right: 10px;
+        }
+    }
+}

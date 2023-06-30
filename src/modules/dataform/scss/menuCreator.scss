@@ -1,0 +1,154 @@
+#menu-tree-creator {
+  max-width: 100%;
+}
+
+#menu-tree-creator, #sortableListsBase {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: #000;
+    border: 1px solid #fff;
+  }
+
+  .menu-tree-item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: #000;
+    border: none;
+    cursor: pointer;
+  }
+
+  ul, #menuTree {
+    padding: 0;
+    background-color: #fff;
+  }
+
+  .menu-tree-item {
+    padding-left: 50px;
+    margin: 5px;
+    border: none;
+    background-color: #404850;
+  }
+
+  .menu-tree-item div.sortDiv {
+    padding: 2px;
+    background-color: #ededed;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    cursor: default;
+    min-height: 43px;
+    line-height: 37px;
+  }
+
+  .sortDiv {
+
+    position: relative;
+
+
+  }
+
+  .menu-title {
+    max-width: 80% !important;
+    display: inline-block;
+    padding-left: 5px;
+
+    .ivu-checkbox-wrapper {
+      margin: 0;
+    }
+  }
+
+  .menu-icon {
+    max-width: 70px;
+    display: inline-block;
+    padding-left: 5px;
+
+  }
+
+  .menu_types {
+    max-width: 120px !important;
+  }
+
+  .menu-cruds {
+    max-width: calc(100% - 255px);
+  }
+
+  .menu-control {
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-height: 26px;
+    line-height: 26px;
+    margin: 0 10px;
+    padding: 7px;
+
+    .ivu-switch {
+
+    }
+  }
+
+  .link-to {
+    color: #666;
+    font-size: 12px;
+  }
+}
+
+.icons-list {
+  h3 {
+    font-weight: 700;
+    margin: 1em 0;
+    font-size: 1.5em;
+  }
+
+  .icon-section {
+    margin: 0 0 3em;
+    clear: both;
+    overflow: hidden;
+  }
+
+
+  .icon-container {
+    width: 240px;
+    padding: .7em 0;
+    float: left;
+    position: relative;
+    text-align: left;
+
+    i {
+      font-size: 21px;
+      color: #000;
+      position: absolute;
+      margin-top: 5px;
+      transition: .3s;
+      border: none;
+      padding: 0;
+    }
+     svg{
+         [fill]:not([fill="none"])  {
+             fill: #3699FF;
+         }
+     }
+
+    .icon-name {
+      color: #666;
+      margin-left: 35px;
+      font-size: 1.1em;
+      transition: .3s;
+
+    }
+
+    &:hover {
+      i {
+        font-size: 2.2em;
+        margin-top: -5px;
+      }
+      .icon-name {
+        margin-left: 45px;
+        color: #000;
+      }
+    }
+  }
+
+
+}

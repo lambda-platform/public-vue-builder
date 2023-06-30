@@ -1,0 +1,95 @@
+.qgis-map{
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: #363636;
+}
+
+.qgis-search{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 10;
+}
+
+.ol-full-screen{
+    left: 0.5em !important;
+    top: 80px !important;
+    width: 30px;
+}
+
+.map-filter{
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 10;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+    .ivu-select{
+        margin: 3px 8px;
+        min-width: 120px;
+    }
+}
+
+.map-layer-switcher {
+    display: flex;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    z-index: 10;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+    a {
+        display: inline-flex;
+        width: 80px;
+        flex-direction: column;
+        border-radius: 4px;
+        transition: all 0.3s;
+        height: 75px;
+
+        img {
+            width: 80px;
+            border: solid 1px transparent;
+            border-radius: 5px;
+            transition: all 0.3s;
+            max-width: calc(100% - 5px);
+            height: 57px;
+        }
+
+        span {
+            font-size: 10px;
+            font-weight: 500;
+            color: #666;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        &:hover, &.active {
+            text-decoration: none;
+
+            img {
+                border: solid 1px #1562b8;
+            }
+
+            span {
+                color: #1562b8;
+            }
+        }
+    }
+}
+
+
+.qgis-attrs{
+    width: 100%;
+    position: relative;
+    .ivu-select{
+        min-width: 200px !important;
+    }
+}

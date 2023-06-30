@@ -1,0 +1,62 @@
+{
+  "toolbox": {
+    "feature": {
+      "saveAsImage": {
+        "title": "Татах"
+      }
+    }
+  },
+  "tooltip": {},
+  "legend": {
+    "orient": "vertical",
+    "left": "left",
+    "data": [
+      "buy",
+      "sell",
+      "mbvalue"
+    ]
+  },
+  "radar": {
+    "name": {
+      "textStyle": {
+        "color": "#fff",
+        "backgroundColor": "#999",
+        "borderRadius": 3,
+        "padding": [
+          3,
+          5
+        ]
+      }
+    },
+    "indicator": [
+      {
+        "name": "buy",
+        "indicator": 7000
+      },
+      {
+        "name": "sell",
+        "indicator": 7000
+      },
+      {
+        "name": "mbvalue",
+        "indicator": 7000
+      }
+    ]
+  },
+  "series": [
+    {
+      "name": "Budget vs spending",
+      "type": "radar",
+      "data": [
+        {
+          "value": [
+            2419,
+            2422,
+            2420.08
+          ],
+          "name": "mbvalue"
+        }
+      ]
+    }
+  ]
+}

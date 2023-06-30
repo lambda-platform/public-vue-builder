@@ -1,0 +1,80 @@
+.material-form {
+    background: transparent !important;
+    box-shadow: none !important;
+
+    .fieldset {
+        background: #ffffff !important;
+        //box-shadow: rgba(221, 221, 221, 0.7) 0px 0px 8px 1px !important;
+        box-shadow: 0px 0px 14px -3px rgba(64, 113, 143, 0.27);
+        border: none !important;
+        border-radius: 4px;
+        margin-bottom: 10px !important;
+        position: relative;
+        padding-top: 58px;
+        padding-left: 20px;
+        padding-right: 20px;
+        legend {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            display: flex;
+            width: 100%;
+            height: 40px;
+            padding-left: 20px;
+            padding-top: 12px;
+            border-bottom: #d7dfe6 solid 1px;
+            text-transform: uppercase;
+            color: #6B808C;
+            font-size: 12px;
+            font-weight: 600;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 50px;
+                height: 2px;
+                left: 20px;
+                top: 38px;
+                background: $primary;
+            }
+        }
+    }
+
+    .subform-grid {
+        box-shadow: 0px 0px 14px -3px rgba(64, 113, 143, 0.27);
+        border-radius: 4px !important;
+        background: #ffffff !important;
+        table {
+            border: 0 !important;
+            border-radius: 4px !important;
+            margin: -1px !important;
+            width: calc(100% + 2px) !important;
+            thead {
+                background: #fafafa !important;
+                th {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+
+        a.sub-grid-add{
+            border: none !important;
+        }
+    }
+
+    .ivu-form-item {
+        .ivu-form-item-label {
+            font-weight: 500;
+            color: #6B808C !important;
+            font-size: 12px;
+        }
+
+        .ivu-form-item-content {
+            .ivu-input-wrapper {
+                background: #ffffff !important;
+            }
+        }
+    }
+}

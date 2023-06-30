@@ -1,0 +1,246 @@
+$primary: #0288D1;
+$secondary: #cedce4;
+$title-color: #6B808C;
+$primary-compact: #57a3f3;
+$secondary-compact: #7f8fa4;
+$title-color-compact: #354052;
+$placeholder-compact: #8f96a1;
+$vue-select-border: #ced0da;
+$success-color: #36af47;
+$warning-color: #f7981c;
+$white: #ffffff;
+
+.form-builder {
+    .ivu-tabs {
+        flex: 1;
+        height: 100%;
+
+        .ivu-tabs-bar {
+            margin-bottom: 0;
+
+            .ivu-tabs-tab {
+                border-radius: 0 !important;
+                background: #fff;
+                font-weight: 400;
+                border-radius: 0;
+                max-width: 170px;
+                overflow: hidden;
+
+                i {
+                    margin-right: 4px;
+
+                    &.ivu-icon-ios-close-empty {
+                        margin-left: 5px;
+                        font-size: 24px;
+
+                        &:hover {
+                            color: #e74c3c;
+                        }
+                    }
+                }
+            }
+
+            .ivu-tabs-tab-active {
+                &:focus,
+                &:active {
+                    border-left: solid 1px #dedede;
+                    border-right: solid 1px #dedede;
+                }
+
+                &:before {
+                    content: '';
+                    display: block; // width: 100%;
+                    height: 2px;
+                    background: #3399ff;
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    right: -1px;
+                }
+            }
+        }
+
+        .ivu-tabs-tabpane {
+            //height: 100%;
+
+            .crud-config {
+                height: 100%;
+
+                .crud-table {
+                    height: 100%;
+                }
+            }
+        }
+
+        .ivu-tabs-content {
+            background: #ffffff;
+            height: calc(100% - 30px); // padding: 20px;
+            border-left: solid 1px #dedede;
+            border-right: solid 1px #dedede;
+            border-bottom: solid 1px #dedede;
+            overflow-y: auto;
+        }
+    }
+
+    .form-controls {
+        height: 60px;
+        margin-top: auto;
+    }
+}
+
+.ivu-date-picker, .ivu-upload, .ivu-upload button {
+    width: 100%;
+}
+
+.ivu-upload-select {
+    .ivu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+
+        img {
+            height: 60px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.form-item-register {
+    display: flex !important;
+
+    .select-char {
+        width: 60px;
+
+        .multiselect__tags {
+            border-right: 0 !important;
+            padding: 8px 30px 0 10px !important;
+            //height: 32px !important;
+        }
+    }
+
+    .first-char {
+        .multiselect__tags {
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+        }
+    }
+
+    .second-char {
+        .multiselect__tags {
+            border-radius: 0 !important;
+        }
+    }
+
+    .ivu-input {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+}
+
+.multiselect {
+    min-height: 32px;
+    font-size: 12px;
+}
+
+.multiselect__placeholder {
+    margin-bottom: 0;
+    padding-top: 0;
+    height: 30px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.multiselect__tags {
+    min-height: 32px;
+    padding: 0 50px 0 8px;
+    border: 1px solid #dcdee2;
+}
+
+.multiselect__tag {
+    margin-bottom: 0;
+    margin-top: 4px;
+}
+
+.multiselect__select {
+    height: 32px;
+    width: 32px;
+    right: 0;
+    padding: 4px 0;
+    top: 0;
+}
+
+.multiselect__content-wrapper {
+    z-index: 100;
+}
+
+.multiselect__single {
+    vertical-align: middle;
+    line-height: unset;
+    margin-bottom: 0;
+}
+
+.multiselect__input, .multiselect__single {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+    height: 30px;
+    background: transparent !important;
+}
+
+.multiselect__input {
+    margin-bottom: 0;
+}
+
+.multiselect__select:before {
+    top: 60%;
+    margin-top: 2px;
+}
+
+.multiselect__option {
+    padding: 6px 12px;
+    min-height: 24px;
+    //line-height: 32px;
+    white-space: normal;
+    line-height: 16px;
+}
+
+.multiselect__option--highlight {
+    background: #0C78E6;
+
+    &::after {
+        display: none !important;
+    }
+}
+
+.multiselect__option--selected {
+    &:after {
+        display: none !important;
+    }
+}
+
+.multiselect__option--selected.multiselect__option--highlight {
+    background: #95afc0;
+}
+
+.multiselect__option:after {
+    line-height: 32px;
+    font-size: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+.jsoneditor {
+    height: 400px !important;
+}
+
+//.select-item {
+//    .ivu-form-item-content {
+//        //line-height: 12px !important;
+//    }
+//}
+

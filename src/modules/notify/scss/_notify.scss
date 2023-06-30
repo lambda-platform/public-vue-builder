@@ -1,0 +1,89 @@
+.noti {
+    font-size: 12px;
+    .page-agent-form {
+        .noti-body {
+            height: calc(100% - 200px);
+            overflow-y: scroll;
+            .notif-item {
+                .ivu-card {
+                    margin-bottom: 10px;
+                    .notif-title {
+                        color: #888888;
+                    }
+                    .notif-content {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        color: #888888;
+                        a {
+                            color: #888888;
+                            i {
+                                color: #888888;
+                            }
+                        }
+                    }
+                    .notif-footer-content {
+                        color: #888888;
+                        a {
+                            color: #888888;
+                            i {
+                                color: #888888;
+                            }
+                        }
+                        .charec {
+                            padding: 0 10px;
+                        }
+                    }
+                }
+                .not_seen {
+                    background: #e9f5ff;
+                    .notif-title {
+                        color: #2d8cf0;
+                    }
+                    .notif-content {
+                        color: #2d8cf0;
+                        a {
+                            color: #2d8cf0;
+                            i {
+                                color: #2d8cf0;
+                            }
+                        }
+                    }
+                    .notif-footer-content {
+                        color: #2d8cf0;
+                        a {
+                            color: #2d8cf0;
+                            i {
+                                color: #2d8cf0;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        .els {
+            p {
+                position: absolute;
+                top: 50%;
+                left: 46%;
+            }
+        }
+        .load {
+            height: calc(100% - 160px);
+        }
+        .noti-footer {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            .noti-info {
+                color: black
+            }
+            .ivu-page.mini .ivu-page-next, .ivu-page.mini .ivu-page-prev, .ivu-page.mini .ivu-page-item-jump-next, .ivu-page.mini .ivu-page-item-jump-prev {
+                height: 16px!important;
+            }
+        }
+    }
+}

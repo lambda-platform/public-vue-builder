@@ -1,0 +1,110 @@
+.grid-zoom-image-modal {
+    max-width: 80%;
+
+    .ivu-modal-content {
+        background: transparent;
+        box-shadow: none !important;
+    }
+
+    .ivu-modal-header, .ivu-modal-footer {
+        border: none !important;
+    }
+
+    .ivu-modal-close{
+        top: 28px;
+        right: -15px;
+    }
+
+    .ivu-modal-prev{
+        top: 50%;
+        left: -15px;
+    }
+
+    .ivu-modal-next{
+        top: 50%;
+        right: -15px;
+    }
+}
+
+.grid-zoom-image {
+    img {
+        width: 100%;
+    }
+}
+
+.grid-image-close-btn {
+    border: solid 1px #fff;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 20px;
+    transition: all .25s;
+
+    i {
+        transition: all .25s;
+        color: #fff;
+    }
+
+    &:hover {
+        border-color: gold;
+
+        i {
+            color: gold;
+        }
+    }
+}
+.grid-image-prev-btn {
+    border: solid 1px #fff;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: -30px;
+    position: absolute;
+    transition: all .25s;
+
+    i {
+        transition: all .25s;
+        color: #fff;
+    }
+
+    &:hover {
+        border-color: gold;
+
+        i {
+            color: gold;
+        }
+    }
+}
+.grid-image-next-btn {
+    border: solid 1px #fff;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    right: -30px;
+    position: absolute;
+    transition: all .25s;
+
+    i {
+        transition: all .25s;
+        color: #fff;
+    }
+
+    &:hover {
+        border-color: gold;
+
+        i {
+            color: gold;
+        }
+    }
+}

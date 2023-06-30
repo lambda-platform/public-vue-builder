@@ -1,0 +1,17 @@
+@import "settings_module";
+
+.nav-divider{
+    margin-top: 25px !important;
+    margin-bottom: 10px !important;
+    &:first-child{
+        margin-top: 0 !important;
+    }
+    &-item {
+        padding-left: 20px;
+        span {
+            color: #4b6584;
+            font-size: 12px;
+            font-weight: 500 !important;
+        }
+    }
+}

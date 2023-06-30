@@ -1,0 +1,14 @@
+.page-preview {
+    display: flex;
+    .pz-preview {
+        flex: 1;
+        overflow: auto;
+    }
+    .pz-form-preview {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+}

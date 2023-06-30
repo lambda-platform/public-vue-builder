@@ -1,0 +1,45 @@
+$primary: #34495e;
+//$ribbon-color: #ecf0f1;
+$ribbon-color: #F0F1F4;
+
+ul.ribbon {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1px #dedede;
+  background: $ribbon-color;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .08);
+  //justify-content: center;
+  li {
+    padding: 5px 10px;
+    a {
+      width: 100px;
+      height: 80px;
+      border-radius: 3px;
+      display: flex;
+      padding: 0 10px;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: darken($ribbon-color, 50%);
+      transition: all .2s ease-in-out;
+      &.active {
+        color: #0C78E6;
+        background: darken($ribbon-color, 5%);
+        font-weight: 500;
+      }
+      i {
+        display: block;
+        font-size: 24px;
+        height: 28px;
+      }
+      span {
+        display: block;
+        height: 16px;
+        font-size: 11px;
+        line-height: 14px;
+      }
+    }
+  }
+}

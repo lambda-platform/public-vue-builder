@@ -1,0 +1,85 @@
+.pb-space {
+    display: flex;
+
+    .pb-sidebar {
+        width: 250px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+
+        &-header {
+            h1 {
+                font-size: 22px;
+            }
+        }
+
+        &-body {
+            flex: 1;
+        }
+    }
+
+    .pb-body {
+        flex: 1;
+        padding: 10px;
+        //.ivu-tabs {
+        //    flex: 1;
+        //    .ivu-tabs-bar {
+        //        margin-bottom: 0;
+        //        .ivu-tabs-tab {
+        //            border-radius: 0 !important;
+        //            background: #fff;
+        //            font-weight: 400;
+        //            overflow: hidden;
+        //            i {
+        //                margin-right: 4px;
+        //
+        //                &.ivu-icon-ios-close-empty {
+        //                    margin-left: 5px;
+        //                    font-size: 24px;
+        //
+        //                    &:hover {
+        //                        color: #e74c3c;
+        //                    }
+        //                }
+        //            }
+        //
+        //            &:hover{
+        //                color: #3ccc38 !important;
+        //            }
+        //        }
+        //
+        //        .ivu-tabs-tab-active {
+        //            color: #3ccc38 !important;
+        //            border-left: solid 1px #dedede;
+        //            border-right: solid 1px #dedede;
+        //            &:focus,
+        //            &:active {
+        //                border-left: solid 1px #dedede;
+        //                border-right: solid 1px #dedede;
+        //            }
+        //
+        //            &:before {
+        //                content: '';
+        //                display: block; // width: 100%;
+        //                height: 2px;
+        //                background: #3ccc38;
+        //                position: absolute;
+        //                top: -1px;
+        //                left: -1px;
+        //                right: -1px;
+        //            }
+        //        }
+        //    }
+        //
+        //    .ivu-tabs-content {
+        //        background: #ffffff;
+        //        height: calc(100% - 30px); // padding: 20px;
+        //        border-left: solid 1px #dedede;
+        //        border-right: solid 1px #dedede;
+        //        border-bottom: solid 1px #dedede;
+        //        padding: 10px;
+        //    }
+        //}
+    }
+}

@@ -1,0 +1,31 @@
+.form-item-register{
+    .letters{
+        table{
+            td{
+                border: solid 1px #dedede;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: all .25s;
+                &:hover, &.active{
+                    background: #f1f2f3;
+                }
+            }
+        }
+    }
+
+    .ivu-btn{
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        border-right: transparent !important;
+        &:hover{
+
+        }
+    }
+
+    .no-border-radius{
+        border-radius: 0 !important;
+    }
+}

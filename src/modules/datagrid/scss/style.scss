@@ -1,0 +1,116 @@
+@import "builder";
+@import "override";
+@import "formula";
+@import "table";
+@import "expand";
+@import "template";
+@import "header-ui";
+@import "custom_table";
+@import "celleditor";
+@import "excel_import_form";
+@import "print";
+@import "image";
+@import "_custom_element.css";
+@import "row_updater";
+@import "./theme/mini";
+
+.dg {
+    height: 100%;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .dg-body {
+        background: #ffffff;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .dg-table {
+            overflow-x: auto;
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            .custom-header {
+                margin-bottom: auto;
+            }
+            .ag-theme-balham {
+                flex: 1;
+            }
+            height: calc(100% - 40px) !important;
+            .number-cell{
+                text-align: right;
+                display: block;
+            }
+        }
+
+        .dg-footer {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            border-left: solid 1px #dedede;
+            border-right: solid 1px #dedede;
+            .dg-info {
+                color: black;
+            }
+            .ivu-page {
+                margin-left: auto;
+                .ivu-page-next,
+                .ivu-page-prev,
+                .ivu-page-item-jump-next,
+                .ivu-page-item-jump-prev {
+                    a i {
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .dg-filter {
+        width: 230px;
+        min-width: 230px;
+        margin-left: 20px;
+        &-widget {
+            background: #ffffff;
+            &-header {
+                border-bottom: solid 1px #dedede;
+                padding: 5px 15px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                h3 {
+                    padding: 0;
+                    margin: 0;
+                    font-size: 11px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+            }
+            &-body {
+                padding: 20px 15px;
+                .ivu-form {
+                    .ivu-form-item {
+                        margin-bottom: 15px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .ivu-date-picker {
+                    width: 100%;
+                }
+                .daterange-double {
+                    display: flex;
+                    .separator {
+                        width: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

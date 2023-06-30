@@ -1,0 +1,30 @@
+.ag-root-wrapper.ag-layout-normal{
+    height: calc(100% - 10px) !important;
+}
+
+.ag-root-wrapper-body {
+    .status-checked {
+        font-size: 14px;
+        color: #2ecc71;
+    }
+
+    .status-unchecked {
+        font-size: 14px;
+        color: #e74c3c;
+    }
+}
+
+.ag-floating-bottom-viewport {
+    font-weight: 500;
+
+    .grid-actions {
+        display: none;
+    }
+}
+
+.grid-checkbox {
+    width: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

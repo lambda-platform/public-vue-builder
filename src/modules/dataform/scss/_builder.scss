@@ -1,0 +1,253 @@
+.form-builder {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 10px 15px 10px 10px;
+    overflow: auto;
+    .fb-item-option {
+        .ivu-modal {
+            width: 80%;
+            height: 80%;
+            border: solid 1px red;
+
+            .ivu-modal-content {
+                width: 100%;
+            }
+        }
+    }
+
+    .fb-sidebar {
+        width: 250px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 0 10px 0 0;
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 500px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+
+            .ivu-btn {
+                margin-right: 10px;
+            }
+        }
+
+        .divider {
+            height: 1px;
+            background: #dedede;
+            width: 100%;
+        }
+
+        .fb-control {
+            height: calc(100vh - 70px);
+            overflow-y: auto;
+            &-item {
+                padding: 10px 0 5px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                label {
+                    font-size: 13px;
+                    color: #444444;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .fb-submit {
+            margin-top: auto;
+        }
+    }
+
+    .fb-workspace {
+        //max-width: calc(100% - 250px);
+        max-width: calc(100vw - 470px);
+        width: 100%;
+
+        table {
+            thead {
+                .ivu-table-cell {
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+            }
+
+            tbody {
+                td {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .crud-table {
+            &-header {
+                background: #f3f4f5;
+                margin-bottom: 5px;
+
+                .ivu-col {
+                    display: flex;
+                    align-items: center;
+                    padding: 6px 15px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    font-size: 11px;
+
+                    &.center {
+                        justify-content: center;
+                    }
+                }
+            }
+
+            &-body {
+                height: calc(100% - 30px);
+                overflow-y: auto;
+            }
+
+            &-body-sub {
+                height: calc(100% - 120px);
+                overflow-y: auto;
+            }
+
+            &-row {
+                margin-top: 0px;
+                margin-bottom: 5px;
+                transition: all .2s;
+
+                &.active {
+                    background: lighten(#a4b0be, 20%);
+
+                    &:hover {
+                        background: lighten(#a4b0be, 20%);
+                    }
+                }
+
+                &:hover {
+                    background: #f7f8f9;
+                }
+
+                .ivu-col {
+                    display: flex;
+                    align-items: center;
+                    padding: 5px 15px;
+                    min-height: 40px;
+
+                    &.center {
+                        justify-content: center;
+                    }
+
+                    strong {
+                        font-weight: 500;
+
+                        .key {
+                            color: #00cec9;
+                        }
+                    }
+
+                    .ivu-input {
+                        // max-width: 200px;
+                        color: #555555;
+                    }
+
+                    .ivu-select {
+                        // width: 250px;
+                    }
+
+                    .expand-toggle {
+                        border: solid 1px lighten(#2D8CED, 10%);
+                        border-radius: 50%;
+                        height: 20px;
+                        width: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all .2s;
+
+                        &:hover {
+                            border-color: #2D8CED;
+
+                            i {
+                                color: #2D8CED;
+                            }
+                        }
+
+                        &.active {
+                            border-color: #2D8CED;
+                            color: #2D8CED;
+                            transform: rotate(180deg);
+                        }
+
+                        &.disabled {
+                            border-color: #dedede;
+
+                            i {
+                                color: #dedede;
+                            }
+                        }
+
+                        i {
+                            color: lighten(#2D8CED, 10%);
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .ivu-select-item{
+            max-width: 400px;
+        }
+    }
+
+    /**
+  Sub Form
+  **/
+    .fb-control-sub {
+        display: flex;
+        margin-bottom: 20px;
+
+        &-item {
+            padding: 10px 15px 5px 0;
+            width: 200px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+    }
+    .crud-table-body-sub{
+        .smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
+            overflow: visible !important;
+            display: block;
+        }
+    }
+    .sub-form-source-grid{
+        padding: 20px;
+    }
+}
+
+.pz-form-preview {
+    .dataform {
+        width: 100%;
+    }
+}
+
+.ivu-poptip-popper {
+    z-index: 10000;
+}
+.form-ui-builder{
+    .smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
+        overflow: visible !important;
+        display: inherit !important;
+    }
+}
+.drag-able-column{
+    //float: none !important;
+}

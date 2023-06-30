@@ -1,0 +1,11 @@
+.view-mode{
+  .subform-grid{
+    .action{
+      display: none;
+    }
+  }
+  .ivu-input-inner-container, .multiselect, .ag-cell{
+    pointer-events: none;
+  }
+
+}

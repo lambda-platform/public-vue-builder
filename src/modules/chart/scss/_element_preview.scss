@@ -1,0 +1,16 @@
+.element-preview{
+  width: calc(100% - 457px);
+
+}
+.element-preview.hidden-element{
+  width: calc(100% - 257px);
+
+}
+.element-preview.hidden-tables{
+  width: calc(100% - 257px);
+
+}
+.element-preview.full{
+  width: calc(100% - 50px);
+
+}

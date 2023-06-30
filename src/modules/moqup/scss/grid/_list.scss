@@ -1,0 +1,68 @@
+.puzzle-list {
+    width: 300px;
+    background: #ffffff;
+    padding: 6px 0;
+    border-right: solid 1px #dedede;
+    .new {
+        padding: 0 10px 10px;
+        .new-btn {
+            width: 100%;
+        }
+    }
+    .search {
+        margin: 10px;
+        .ivu-input-wrapper {
+            max-width: 100%;
+        }
+    }
+    ul {
+        list-style: none;
+        height: calc(100% - 80px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        li {
+            display: flex;
+            color: #777777;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-bottom: solid 1px #eeeeee;
+            font-size: 13px;
+            display: flex;
+            min-height: 32px;
+            align-items: center;
+            span {
+                &.list-control {
+                    display: none;
+                    margin-left: auto;
+                    a {
+                        display: inline-flex;
+                        cursor: pointer;
+                        width: 22px;
+                        height: 22px;
+                        border: solid 1px #dedede;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 2px;
+                        i {
+                            color: #777777;
+                            font-size: 12px;
+                        }
+                        &:hover {
+                            .ivu-icon-edit {
+                                color: #3498db;
+                            }
+                            .ivu-icon-trash-b {
+                                color: #e74c3c;
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                span.list-control {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

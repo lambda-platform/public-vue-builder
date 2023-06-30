@@ -1,0 +1,23 @@
+.v-select .form-control {
+    position: absolute;
+    top: 0;
+    width: 100% !important;
+}
+
+.v-select .selected-tag {
+    width: 100%;
+}
+
+.with-info-caller{
+    width: calc(100% - 27px);
+    float: left;
+}
+.info-caller{
+    width: 24px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    /*padding-top: 2px;*/
+    padding-left: 2px;
+    right: 5px;
+}

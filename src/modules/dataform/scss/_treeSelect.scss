@@ -1,0 +1,22 @@
+.tree-select{
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  border-radius:5px;
+  width: 100%;
+  display: block;
+  position: relative;
+  .ivu-tree-children{
+   li{
+     border-top: 1px solid #CCCCCC;
+     margin: 0;
+     padding: 8px 0;
+     .ivu-tree-title{
+       width: 100%;
+     }
+     .ivu-tree-title-selected, .ivu-tree-title-selected:hover {
+       background-color: #007ae5;
+       color: #fff;
+     }
+   }
+  }
+}

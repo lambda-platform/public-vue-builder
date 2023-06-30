@@ -1,0 +1,110 @@
+$primary: #2F55D4;
+$bg-color: #F4F5F6;
+$secondary: #FF8200;
+$shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+.canvas-aside {
+    .crud-page {
+        height: 100vh !important;
+
+        &-header {
+            border: 0 !important;
+            border-bottom: solid 1px #dedede !important;
+            height: 60px !important;
+            margin-bottom: 20px !important;
+            box-shadow: $shadow !important;
+            border-radius: 10px !important;
+
+            &-left {
+                flex: 1;
+                display: flex;
+
+                .ivu-btn-success {
+                    margin-left: auto;
+                    margin-right: 15px;
+                    height: 30px;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    padding: 0 6px !important;
+
+                    i {
+                        font-size: 15px;
+                    }
+                }
+
+                .divider {
+                    display: none !important;
+                }
+            }
+        }
+
+        &-body {
+            margin: 0 !important;
+            height: 100vh !important;
+            top: 0 !important;
+            padding: 10px 10px 10px 0 !important;
+
+            .v-nav {
+                margin-right: 0 !important;
+                height: 100vh;
+                background: $bg-color !important;
+                padding-top: 15px !important;
+                width: 200px;
+
+                .card {
+                    background: transparent !important;
+                    box-shadow: none !important;
+
+                    .card-header {
+                        background: transparent !important;
+                        font-weight: bold;
+                        margin-bottom: 20px;
+                        font-size: 16px;
+                        border: 0 !important;
+                    }
+
+                    .card-body li a {
+                        font-size: 13px !important;
+                        font-weight: 500 !important;
+
+                        i {
+                            font-size: 18px !important;
+                            font-weight: 500 !important;
+                        }
+
+                        &:hover {
+                            background-color: transparent;
+                        }
+
+                        &.active {
+                            color: $secondary !important;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+
+            .dg-flex {
+                height: calc(100vh - 20px) !important;
+                background: transparent !important;
+                box-shadow: rgba(#f1f1f1, 0.2) 0px 0px 12px 0px !important;
+
+                .dg-body {
+                    box-shadow: none !important;
+                }
+
+                .dg {
+                    height: calc(100vh - 100px) !important;
+                    border-radius: 10px !important;
+                    box-shadow: $shadow !important;
+                    overflow: hidden;
+
+                    .ag-header {
+                        background: #ffffff !important;
+                    }
+                }
+            }
+        }
+    }
+}

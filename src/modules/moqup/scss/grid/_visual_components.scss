@@ -1,0 +1,21 @@
+.visual-components {
+    width: 260px;
+    padding-top: 7px;
+    background: #ffffff;
+    height: 100%;
+    &-list {
+        padding: 0 20px;
+        &-item {
+            border: solid 1px #dedede !important;
+            margin-bottom: 10px;
+            min-height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                cursor: move;
+                border-color: #006FE1;
+            }
+        }
+    }
+}

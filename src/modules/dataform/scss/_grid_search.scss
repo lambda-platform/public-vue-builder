@@ -1,0 +1,52 @@
+.grid-search-input {
+    .ivu-select {
+        min-height: 30px;
+        .ivu-select-selection {
+            min-height: 30px;
+        }
+        .ivu-icon-arrow-down-b:before {
+            content: "\F4A4";
+        }
+        .ivu-select-arrow {
+            transform: rotate(0deg) !important;
+        }
+        .ivu-tag .ivu-icon {
+            display: none;
+        }
+        .ivu-select-dropdown {
+            display: none;
+        }
+    }
+}
+
+.grid-search-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .ivu-modal {
+        top: 0;
+        max-height: calc(100% - 80px);
+        .ivu-modal-content {
+            .ivu-modal-body {
+                overflow-y: auto;
+                .dg {
+                    max-height: calc(100% - 250px);
+                    overflow: auto;
+                    .dg-body {
+                        overflow: auto;
+                    }
+                }
+            }
+        }
+    }
+    h3 {
+        text-transform: uppercase;
+        font-weight: 500px;
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+    .ivu-modal-footer {
+        display: none !important;
+    }
+}

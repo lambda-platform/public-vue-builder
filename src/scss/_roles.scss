@@ -1,0 +1,73 @@
+.role-control {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    .role-list {
+        width: 300px;
+        float: left;
+        background: #ffffff;
+        height: 100%;
+        overflow-y: auto;
+        padding: 15px 10px 10px 10px;
+        margin-right: 20px;
+        border-radius: 5px;
+        box-shadow: rgba(221, 221, 221, 0.7) 0 0 8px 1px;
+
+        .ivu-btn {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 0;
+            li {
+                list-style: none;
+                height: 35px;
+                padding: 5px 10px;
+                margin: 5px 0;
+                width: 100%;
+                position: relative;
+                border-bottom: dotted 1px #dedede;
+                border-radius: 5px;
+                display: flex;
+                &:last-child {
+                    border-bottom: 0;
+                }
+                .role_name {
+                    flex: 1;
+                    cursor: pointer;
+                    font-size: 13px;
+                }
+
+                button {
+                    margin-left: auto;
+                    &.edit-btn {
+                        margin-right: 5px;
+                    }
+                }
+
+                &.active, &:hover {
+                    background: #f4f5f6;
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .role-config {
+        flex: 1;
+        margin-right: auto;
+        background: #fff;
+        border-radius: 5px;
+        height: 100%;
+        overflow-y: auto;
+        padding: 15px 20px;
+        box-shadow: rgba(221, 221, 221, 0.7) 0px 0px 8px 1px;
+    }
+}
+
+.paper-header.mini {
+    .user-control{
+        height: 30px!important;
+        margin-top: -10px;
+    }
+}

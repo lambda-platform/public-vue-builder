@@ -1,0 +1,289 @@
+$theme-name: default !default;
+// common
+$item-vertical-spacing: 4px !default;
+$item-border-radius: 0px !default;
+// groups
+$group-background-color: rgba(250, 240, 210, .0) !default;
+$group-border-color: #4c9ee6 !default;
+$group-border: 1px solid $group-border-color !default;
+$group-padding: 10px !default;
+// rules
+$rule-background-color: rgba(255, 255, 255, .9) !default;
+$rule-border-color: #EEE !default;
+$rule-border: 1px solid $rule-border-color !default;
+$rule-padding: 5px !default;
+// scss-lint:disable ColorVariable
+$rule-value-separator: 1px solid #DDD !default;
+// errors
+$error-icon-color: #F00 !default;
+$error-border-color: #F99 !default;
+$error-background-color: #FDD !default;
+// ticks
+$ticks-width: 2px !default;
+$ticks-color: #CCC !default;
+$ticks-position: 5px,
+10px !default;
+// ABSTRACTS
+%base-container {
+    position: relative;
+    margin: $item-vertical-spacing 0;
+    border-radius: $item-border-radius;
+    padding: $rule-padding;
+    border: $rule-border;
+    background: $rule-background-color;
+}
+
+%rule-component {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+
+.query-builder {
+    width: 100%; // GROUPS
+    .rules-group-container {
+        @extend %base-container;
+        padding: $group-padding;
+        padding-bottom: #{$group-padding - $item-vertical-spacing};
+        border: $group-border;
+        background: $group-background-color;
+    }
+    .rules-group-header {
+        margin-bottom: $group-padding;
+        .group-conditions {
+            .btn.readonly:not(.active),
+            input[name$='_cond'] {
+                border: 0;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+                white-space: nowrap;
+            }
+            .btn.readonly {
+                border-radius: 3px;
+            }
+        }
+    }
+    .rules-list {
+        list-style: none;
+        padding: 0 0 0 #{nth($ticks-position, 1) + nth($ticks-position, 2)};
+        margin: 0;
+    } // RULES
+    .rule-container {
+        @extend %base-container;
+        .rule-filter-container,
+        .rule-operator-container,
+        .rule-value-container {
+            @extend %rule-component;
+        }
+    }
+    .rule-value-container {
+        border-left: $rule-value-separator;
+        padding-left: 5px;
+        .form-control {
+            max-width: 85px;
+        }
+        label {
+            margin-bottom: 0;
+            font-weight: normal;
+            &.block {
+                display: block;
+            }
+        }
+        select,
+        input[type='text'],
+        input[type='number'] {
+            padding: 1px;
+        }
+    } // ERRORS
+    .error-container {
+        @extend %rule-component;
+        display: none;
+        cursor: help;
+        color: $error-icon-color;
+    }
+    .has-error {
+        background-color: $error-background-color;
+        border-color: $error-border-color;
+        .error-container {
+            display: inline-block !important;
+        }
+    } // TICKS
+    .rules-list>* {
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: #{-1 * nth($ticks-position, 2)};
+            width: nth($ticks-position, 2);
+            height: calc(50% + #{$item-vertical-spacing});
+            border-color: $ticks-color;
+            border-style: solid;
+        }
+        &::before {
+            top: #{-2 * $ticks-width};
+            border-width: 0 0 $ticks-width $ticks-width;
+        }
+        &::after {
+            top: 50%;
+            border-width: 0 0 0 $ticks-width;
+        }
+        &:first-child::before {
+            top: #{-$group-padding - $ticks-width};
+            height: calc(50% + #{$group-padding + $item-vertical-spacing});
+        }
+        &:last-child::before {
+            border-radius: 0 0 0 #{2 * $ticks-width};
+        }
+        &:last-child::after {
+            display: none;
+        }
+    }
+}
+
+// import
+// endimport
+.query-builder,
+.query-builder * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.query-builder {
+    font-family: sans-serif;
+}
+
+.query-builder .hide {
+    display: none;
+}
+
+.query-builder .pull-right {
+    float: right !important;
+}
+
+.query-builder .btn {
+    text-transform: none;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.query-builder .btn.focus,
+.query-builder .btn:focus,
+.query-builder .btn:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.query-builder .btn.active,
+.query-builder .btn:active {
+    background-image: none;
+    outline: 0px none;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.125) inset;
+}
+
+.query-builder .btn-success {
+    color: #FFF;
+    background-color: #5CB85C;
+    border-color: #4CAE4C;
+}
+
+.query-builder .btn-primary {
+    color: #FFF;
+    background-color: #4c9ee6;
+    border-color: #4c9ee6;
+}
+
+.query-builder .btn-danger {
+    color: #FFF;
+    background-color: #D9534F;
+    border-color: #D43F3A;
+}
+
+.query-builder .btn-success.active,
+.query-builder .btn-success.focus,
+.query-builder .btn-success:active,
+.query-builder .btn-success:focus,
+.query-builder .btn-success:hover {
+    color: #FFF;
+    background-color: #449D44;
+    border-color: #398439;
+}
+
+.query-builder .btn-primary.active,
+.query-builder .btn-primary.focus,
+.query-builder .btn-primary:active,
+.query-builder .btn-primary:focus,
+.query-builder .btn-primary:hover {
+    color: #FFF;
+    background-color: #007AE5;
+    border-color: #007AE5;
+}
+
+.query-builder .btn-danger.active,
+.query-builder .btn-danger.focus,
+.query-builder .btn-danger:active,
+.query-builder .btn-danger:focus,
+.query-builder .btn-danger:hover {
+    color: #FFF;
+    background-color: #C9302C;
+    border-color: #AC2925;
+}
+
+.query-builder .btn-group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.query-builder .btn-group>.btn {
+    position: relative;
+    float: left;
+    top: -2.5px;
+}
+
+.query-builder .btn-group>.btn:first-child {
+    margin-left: 0px;
+}
+
+.query-builder .btn-group>.btn:first-child:not(:last-child) {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.query-builder .btn-group>.btn:last-child:not(:first-child) {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.query-builder .btn-group .btn+.btn,
+.query-builder .btn-group .btn+.btn-group,
+.query-builder .btn-group .btn-group+.btn,
+.query-builder .btn-group .btn-group+.btn-group {
+    margin-left: -1px;
+}
+
+.query-builder .btn-xs,
+.query-builder .btn-group-xs>.btn {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}

@@ -1,0 +1,43 @@
+.email-wrapper{
+    padding: 20px;
+    .email-address{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        label{
+            margin-right: 20px;
+            width: 80px;
+        }
+        .vue-input-tag-wrapper{
+            flex: 1;
+        }
+    }
+
+    .subject{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        label{
+            margin-right: 20px;
+            width: 80px;
+        }
+
+        .ivu-input-wrapper{
+            padding-left: 10px;
+        }
+        .ivu-input{
+            border-radius: 0;
+            height: 40px;
+            border: solid 1px #ccc;
+        }
+    }
+
+    .body{
+        .ck-editor__main{
+            min-height: 400px;
+            .ck-content{
+                min-height: 400px;
+            }
+        }
+    }
+}

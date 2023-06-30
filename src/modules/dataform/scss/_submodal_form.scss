@@ -1,0 +1,121 @@
+.sub-modal-form table tbody tr td .ivu-form-item .ivu-input {
+  color: #333333 !important;
+
+}
+
+.vertical-center-modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ivu-modal{
+        top: 0;
+    }
+}
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  //background: #ffffff;
+  .ivu-form-item-label{
+    display: block !important;
+    text-align: left !important;
+  }
+  .form-tool {
+    border-bottom: solid 1px #dedede;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+    &-actions {
+      margin-left: auto;
+
+      a {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        height: 30px;
+        line-height: 1;
+        transition: 200ms box-shadow, 200ms color, 200ms background, 200ms fill;
+        width: 24px;
+        margin-left: 7px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          color: #848f99;
+          font-weight: 500;
+          font-size: 17px;
+
+          &.ti-view-list-alt {
+            font-size: 16px;
+          }
+
+          &.ti-close {
+            font-size: 15px;
+          }
+        }
+
+        &:hover {
+          i {
+            color: darken(#848f99, 20%);
+          }
+        }
+      }
+    }
+  }
+
+  .form-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 0px;
+
+    .add-title {
+      padding: 20px;
+      font-size: 18px;
+      text-transform: uppercase;
+      width: calc(100% - 20px);
+
+      .ivu-input {
+        font-size: 18px;
+        border: 0;
+        padding-left: 0;
+      }
+    }
+
+    .dataform-header {
+      display: none;
+    }
+
+  }
+  .subform-grid{
+    .ivu-form-item-label{
+      display: none !important;
+    }
+  }
+}
+
+.dataform-model-form{
+    width: 80vw;
+    .ivu-modal-wrap{
+        overflow: hidden;
+        .ivu-modal-content{
+            width: 80vw;
+            .ivu-modal-body {
+                height: 80vh;
+                overflow-y: auto;
+                .form-body{
+                    overflow: hidden;
+                    .dataform-body{
+                        max-height: 73vh;
+                        overflow-x: hidden;
+                    }
+                }
+            }
+        }
+    }
+}

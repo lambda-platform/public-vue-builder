@@ -1,0 +1,137 @@
+//@import "~vue-multiselect/dist/vue-multiselect.min.css";
+//@import "~ant-design-vue/dist/antd.css";
+
+@import "override";
+@import "builder";
+@import "crud";
+@import "dataform";
+@import "expand";
+@import "subform_grid";
+@import "submodal_form";
+@import "layout";
+@import "grid_search";
+@import "./menuCreator";
+@import "geographic";
+@import "trigger";
+@import "formula";
+@import "email";
+@import "addable_modal";
+@import "treeSelect";
+@import "template/material";
+@import "infoModal";
+@import "viewMode";
+@import "./elements/file";
+@import "./elements/map";
+@import "./elements/image_sub_form";
+@import "./elements/dragMap";
+@import "./elements/image";
+@import "./elements/checkbox";
+@import "./elements/select";
+@import "./elements/download";
+@import "./elements/imageDrag";
+@import "./elements/adminMenu";
+@import "./elements/_html";
+@import "./elements/radio_with_thumb";
+@import "./elements/qgis";
+@import "./elements/label";
+@import "./elements/register";
+@import "step";
+@import "responsive";
+
+
+.form-wrapper {
+    position: relative;
+}
+
+//UI builder
+// @import "../../../puzzle/assets/scss/style.scss";
+.form-ui-builder {
+    position: relative;
+    padding: 0;
+    display: flex;
+
+    .draggable-list {
+        width: 200px;
+        padding: 40px 10px 20px;
+
+        .draggable-items {
+            border-bottom: solid 1px #dedede;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        &-item {
+            border: dashed 1px #cccccc;
+            margin-bottom: 10px;
+            padding: 3px 10px;
+
+            &.disabled {
+                color: #999999;
+                border: dashed 1px #f1f2f3;
+
+                &:hover {
+                    cursor: not-allowed;
+                    color: #999999;
+                    border: dashed 1px #f1f2f3;
+                }
+            }
+
+            &:hover {
+                border-color: #95a5a6;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .pz-workspace {
+        padding: 0;
+        border: 0;
+
+        &-header {
+            background: #ffffff;
+        }
+
+        &-container {
+            background: #f3f4f5;
+        }
+    }
+
+    .drop-preview {
+        background-color: rgba(150, 150, 200, 0.1);
+        border: 1px dashed #abc;
+        margin: 5px;
+    }
+
+    .smooth-dnd-draggable-wrapper {
+        width: 100%;
+    }
+}
+
+.smooth-dnd-container {
+    position: relative;
+    min-height: 30px;
+    min-width: 30px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.section-rows {
+    .smooth-dnd-draggable-wrapper {
+        overflow: visible !important;
+        position: relative;
+
+    }
+}
+
+.warn-build-wrap{
+    background: #F5F6FC;
+    padding: 20px 10px;
+}

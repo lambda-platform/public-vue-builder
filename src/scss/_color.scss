@@ -1,0 +1,268 @@
+$primary: #2f3640;
+$primary: #5630B3;
+$primary: #485460;
+$primary: #2C3A47;
+$text-color: lighten($primary, 46%);
+
+.ivu-btn-success {
+    background: rgba(60, 204, 56, .95) !important;;
+}
+
+.crud-page-header-left > h3 {
+    color: $primary !important;
+}
+
+//Side bar
+.sidebar {
+    background: $primary !important;
+
+    .logo {
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+        text-align: left;
+        height: 60px !important;
+        padding: 0 0 0 12px !important;
+        border-bottom: solid 1px lighten($primary, 8%) !important;
+        margin-bottom: 5px;
+
+        img {
+            width: auto !important;
+            height: 36px !important;
+            margin-right: 10px;
+            margin-top: -3px;
+        }
+
+        span {
+            color: rgba(#ffffff, .8);
+            font-size: 20px;
+        }
+
+        .app-text {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .ivu-select-selection{
+            border: solid 1px lighten(#364757, 5%) !important;
+            &:hover{
+                border: solid 1px lighten(#364757, 15%) !important;
+            }
+        }
+
+        .ivu-select-selected-value{
+            font-size: 14px !important;
+        }
+    }
+
+    &.wide {
+        .aside-bottom {
+            ul {
+                li {
+                    a {
+                        color: $text-color;
+                        border-top: 0 !important;
+                    }
+                }
+            }
+        }
+
+        width: 225px !important;
+
+        nav {
+            ul {
+                li {
+                    padding: 0 0 1px 0;
+
+                    &.divider {
+                        height: 1px;
+                        background: lighten($primary, 5%) !important;
+                        margin-top: 10px;
+                    }
+
+                    &.sub-title {
+                        font-size: 11px !important;
+                        color: lighten($primary, 70%) !important;
+                        margin-top: 10px;
+                        opacity: .7;
+
+                        span {
+                            padding-left: 10px;
+                        }
+                    }
+
+                    a {
+                        position: relative;
+                        overflow-y: hidden;
+                        display: flex;
+                        padding: 8px 5px 8px 20px !important;
+                        color: $primary;
+                        transition: all .3s;
+                        align-items: center;
+                        border-left: 0;
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                        //width: 175px !important;
+                        margin: 5px 20px 0 0;
+
+                        i {
+                            color: $text-color !important;
+                            display: block;
+                            font-size: 22px;
+                            transition: all .3s;
+                            margin-right: 6px;
+                        }
+
+                        span:not(.ivu-badge) {
+                            color: $text-color !important;
+                            font-size: 13px;
+                            //font-weight: 500;
+                            line-height: 13px;
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            display: block;
+                            transition: all .3s;
+                        }
+
+                        .ivu-badge {
+                            position: absolute;
+                            top: 3px;
+                            right: 10px;
+                        }
+
+                        &:hover {
+                            background: lighten($primary, 5%) !important;
+
+                            i, span {
+                                color: rgba(#ffffff, .8) !important;
+                            }
+                        }
+
+                        &.active {
+                            //background: rgba(lighten(#44bd32, 8%), .6) !important;
+                            //background: rgba(60, 204, 56, .15) !important;
+                            background: lighten($primary, 8%) !important;
+
+                            span, i {
+                                font-weight: 500 !important;
+                                color: rgb(60, 204, 56) !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.paper-header {
+    .header-left h3.title {
+        color: $primary !important;
+    }
+
+    .paper-header-nav .nav ul li a {
+        &:hover {
+            color: $primary !important;
+        }
+
+        &.active {
+            color: $primary !important;
+            border-bottom: solid 2px $primary !important;
+        }
+    }
+}
+
+.user-control {
+    ul {
+        > li {
+            > .ivu-badge > a {
+                &:hover {
+                    i {
+                        color: $primary !important;
+                    }
+                }
+            }
+
+            .ivu-poptip-rel {
+                a {
+                    color: $primary !important;
+
+                    &:hover {
+                        i {
+                            color: $primary !important;
+                        }
+                    }
+                }
+            }
+
+            &.avatar-item {
+                .ivu-poptip-content {
+                    .ivu-poptip-arrow {
+                        border-bottom-color: $primary !important;
+
+                        &:after {
+                            border-bottom-color: $primary !important;
+                        }
+                    }
+
+                    .ivu-poptip-body .header-profile-info {
+                        background: $primary !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-profile ul li a:hover {
+        i, span {
+            color: $primary !important;
+        }
+    }
+}
+
+//Sub sidebar
+.sub-sidebar {
+    background: #ffffff !important;
+
+    &.tabbed {
+        .ivu-tabs-tab-active {
+            color: $primary !important;
+        }
+
+        .ivu-tabs-ink-bar {
+            background: $primary !important;
+        }
+    }
+
+    nav {
+        ul {
+            li {
+                a {
+                    &:hover {
+                        color: lighten($primary, 5%) !important;
+                    }
+
+                    &.active {
+                        &:hover {
+                            color: $primary !important;
+                            cursor: default;
+                        }
+
+                        background: transparent !important;
+                        color: lighten($primary, 5%) !important;
+
+                        i {
+                            opacity: 1;
+                            color: $primary !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ivu-drawer-header {
+    background: $primary !important;
+}

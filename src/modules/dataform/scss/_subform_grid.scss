@@ -1,0 +1,410 @@
+.subform-grid {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 30px;
+
+    background: transparent;
+
+    .ivu-form-item-label{
+        display: none !important;
+    }
+    .subform-header {
+
+        margin-top: 2px;
+        margin-bottom: 10px;
+        color: #515a6e;
+        font-size: 12px;
+
+        .sub-form-add-btn {
+            margin-left: 15px;
+        }
+
+    }
+
+    .sub-form-grid {
+        display: block;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .sub-form-table-wrap{
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100% !important;
+        border-collapse: collapse;
+        border-spacing: 0;
+        background: #ffffff;
+        border: 0 !important;
+        //display: block;
+        //overflow-x: auto;
+        //overflow-y: hidden;
+
+        thead {
+            background: #f1f2f3;
+
+            th {
+                font-size: 10px;
+                font-weight: 500;
+                text-transform: uppercase;
+                padding: 4px 15px;
+                border: 1px solid #CCC;
+                color: #565665;
+
+                i {
+                    float: right;
+                    position: relative;
+                    right: -7px;
+                    font-size: 8px;
+                }
+            }
+        }
+
+        tbody {
+            min-height: 200px !important;
+
+            tr {
+                padding: 0;
+                border: 1px solid #CCC;
+
+                &:hover {
+                    td,
+                    ivu-input {
+                        // background: #f4f5f6;
+                    }
+                }
+
+                td {
+                    border: 1px solid #CCC;
+                    padding: 0;
+                    font-size: 13px;
+                    text-align: center;
+                    vertical-align: middle;
+                    //overflow-y: hidden;
+                    /*.v-select {
+                        height: 20px;
+                        .dropdown-toggle {
+                            height: 20px;
+                            border: 0;
+                            line-height: 20px;
+                            &:hover, &:active, &:focus {
+                                border: 0 !important;
+                                outline: none !important;
+                            }
+                            .vs__selected-options {
+                                height: 20px;
+                            }
+                            input {
+                                max-height: 20px;
+                            }
+                        }
+                        .vs__actions {
+                            height: 20px !important;
+                        }
+                    }*/
+                    .multiselect {
+                        min-height: 22px;
+                        height: 22px;
+
+                        .multiselect__tags {
+                            min-height: 22px;
+                            border: none;
+                            margin: 0 2px;
+                            padding: 0 20px 0 6px;
+                            position: relative;
+                        }
+
+                        .multiselect__input, .multiselect__single {
+                            height: 22px;
+                        }
+
+                        .multiselect__placeholder {
+                            height: 22px;
+                        }
+
+                        .multiselect__select {
+                            padding: 0;
+                            height: 22px;
+
+                        }
+
+                        .multiselect__single {
+                            position: absolute;
+                            max-width: calc(100% - 26px);
+                        }
+
+                        .caret-container {
+                            z-index: 20;
+
+                            .addable-caret {
+                                right: 28px;
+                            }
+
+                            button {
+                                width: 20px;
+                                height: 20px;
+                                top: 2px;
+                                z-index: 21;
+                            }
+                        }
+
+                        .clear-container {
+                            display: none;
+                        }
+
+                        .multiselect__content-wrapper {
+                            margin-top: 4px;
+                            border-radius: 0 !important;
+                        }
+
+                        .multiselect__option {
+                            min-height: 22px;
+                            line-height: 22px;
+
+                            &:after {
+                                line-height: 22px;
+                            }
+                        }
+
+                        .multiselect__input {
+                            position: absolute;
+                            top: 2px;
+                            left: 2px;
+                        }
+                    }
+
+                    .ivu-form-item-content {
+                        line-height: 24px;
+
+                        .ivu-upload {
+                            height: 24px;
+                            overflow: hidden;
+
+                            .ivu-upload-select {
+                                .ivu-btn {
+                                    span {
+                                        div {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .ivu-form-item {
+                        margin-bottom: 0 !important;
+
+                        .ivu-input {
+                            height: 24px;
+                            margin: 0;
+                            border: 0;
+                            border-radius: 0;
+                            background: transparent;
+
+                            &:hover,
+                            &:active,
+                            &:focus {
+                                //background: #ffffff !important;
+                                box-shadow: none;
+                                outline: none;
+                            }
+                        }
+
+                        .ivu-select {
+                            &-selection {
+                                height: 24px;
+                                border: 0;
+                            }
+
+                            &-input {
+                                border: 0;
+                                max-height: 24px;
+                            }
+                        }
+
+                        .ivu-form-item-content {
+                            height: 24px;
+                        }
+
+                        .ivu-checkbox-wrapper {
+                            margin: auto 0;
+                            height: 24px;
+                            padding-top: 4px;
+                        }
+
+                        .ivu-btn {
+                            border: none !important;
+
+                            i {
+                                font-size: 14px;
+                            }
+                        }
+
+                        .ivu-upload {
+                            img {
+                                height: 22px;
+                                margin-top: 1px;
+                            }
+
+                            .ivu-upload-list {
+                                display: none;
+                            }
+
+                            .ivu-btn {
+                                .ivu-icon + span {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    &.action {
+                        text-align: center;
+                        display: inline-block;
+                        height: 24px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 0;
+
+                        a {
+                            padding: 0 5px;
+                            color: #777777;
+
+                            i {
+                                font-size: 12px;
+                            }
+
+                            &:hover {
+                                color: #e74c3c;
+                            }
+                        }
+
+                        .sub-edit {
+                            &:hover {
+                                color: #1d45aa;
+                            }
+                        }
+                    }
+                    .file-upload-handler, .ivu-upload{
+                        //display: none;
+                    }
+                    .file-uploader{
+                        border:none;
+                    }
+                }
+            }
+        }
+
+        tfoot {
+            background: #f1f2f3;
+
+            tr {
+                border-bottom: solid 1px #dedede;
+                padding: 0;
+                border: 1px solid #CCC;
+
+                td {
+                    font-size: 12px;
+                    text-align: center;
+                    padding: 5px 0 5px 0;
+                    border: 1px solid #CCC;
+                    color: #565665;
+                }
+            }
+        }
+    }
+
+    a.sub-grid-add {
+        text-align: center;
+        border: solid 1px #cccccc;
+        border-radius: 2px;
+        padding: 4px;
+        font-size: 12px;
+        width: 100%;
+        display: inline-block;
+        margin: -1px auto 0;
+        color: #666666;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 30px;
+        cursor: pointer;
+
+        i {
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        &:hover {
+            color: #006FE1; // border-color: #2ecc71;
+        }
+    }
+
+    th.row-number, td.row-number {
+        width: 60px;
+    }
+    .source-grid{
+        .add-from-pre-source{
+            padding: 0px 10px 10px 10px;
+
+            text-align: right;
+        }
+        .dg-footer{
+            border-bottom: solid 1px #dedede;
+            height: 28px !important;
+        }
+        .source-grid-description{
+            padding: 15px;
+            h3{
+                //font-weight: 400;
+            }
+            p{
+                color: #636E72;
+            }
+
+        }
+    }
+
+}
+
+.subform-image {
+    //display: flex;
+    .subform-img-preview {
+        height: 20px !important;
+    }
+
+    .ivu-upload-list {
+        display: none !important;
+    }
+
+    .ivu-btn {
+        padding: 0 !important;
+        height: 100%;
+
+        span {
+            display: flex;
+            align-items: center;
+
+            img ~ div {
+                display: none !important;
+            }
+
+            img {
+                margin-bottom: 0;
+            }
+        }
+
+        i {
+            margin: 5px;
+            display: block;
+            //display: none;
+        }
+    }
+}

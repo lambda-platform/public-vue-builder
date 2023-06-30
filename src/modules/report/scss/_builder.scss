@@ -1,0 +1,40 @@
+.report-builder {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    .rb-workspace {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.pz-form-preview {
+    .dataform {
+        width: 100%;
+    }
+}
+
+.ivu-poptip-popper {
+    z-index: 10000;
+}
+
+.report-ui-builder {
+    .smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper {
+        overflow: visible !important;
+        display: inherit !important;
+    }
+}
+
+.gc-app-license-badge {
+    display: none !important;
+}
+
+.gc-grid--designer {
+    .ar-view {
+        .eval-text123 {
+            display: none!important;
+        }
+    }
+}

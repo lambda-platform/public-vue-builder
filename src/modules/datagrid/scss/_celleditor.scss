@@ -1,0 +1,41 @@
+.grid-editor {
+    //height: calc(100% - 1px);
+    width: 100%;
+    margin-top: -1px;
+    &.date {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        border: solid 1px #dedede;
+        .date-editor {
+            flex: 1;
+            width: calc(100% - 25px);
+            height: 100%;
+            border: none;
+            padding-left: 8px;
+        }
+
+        .date-pick-btn {
+            width: 20px;
+            min-height: 30px;
+            height: 100%;
+            i {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .ivu-select-dropdown {
+        z-index: 10000;
+    }
+}
+.ag-input-text-wrapper{
+    width: 100%;
+}
+
+.ag-cell-inline-editing {
+    padding: 0;
+    overflow: visible !important;
+}

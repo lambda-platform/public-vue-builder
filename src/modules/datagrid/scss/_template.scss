@@ -1,0 +1,102 @@
+.grid-templates {
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    [class^="template-"] {
+        border: solid 3px #dedede;
+        height: 200px;
+        width: 300px;
+        display: flex;
+        margin-left: 20px;
+        color: #555555;
+        transition: all .3s;
+        &:hover {
+            cursor: pointer;
+            border-color: #b3d8ff;
+        }
+        &.active {
+            border-color: #b3d8ff;
+            .t-grid,
+            .t-filter,
+            .t-filter-top{
+                background: #ecf5ff;
+            }
+        }
+    }
+    .row-template-1{
+        margin-bottom: 20px;
+    }
+    .t-grid,t-main-grid {
+        background: #f1f2f3;
+        height: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .t-filter,.t-filter-top {
+        background: #f1f2f3;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .template-0 {
+        padding: 3px;
+        .t-grid {
+            width: 300px;
+        }
+    }
+    .template-1 {
+        padding: 3px;
+        .t-grid {
+            width: 200px;
+        }
+        .t-filter {
+            width: 95px;
+            margin-left: 5px;
+        }
+    }
+    .template-2 {
+        padding: 3px;
+        display: flex;
+        flex-direction: column;
+        .t-grid {
+            width: 288px;
+            height: 133px;
+            margin-top: auto;
+        }
+        .t-filter {
+            width: 288px;
+            height: 50px;
+        }
+    }
+    .template-3 {
+        padding: 3px;
+        display: flex;
+        .t-main-grid{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            .t-filter-top {
+                width: 100%;
+                height: 50px;
+            }
+            .t-grid {
+                height: 133px;
+                margin-top: auto;
+            }
+
+        }
+        .t-filter {
+            width: 95px;
+            height: 100%;
+            margin-left: 5px;
+        }
+
+    }
+}
+
+.grid-theme{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}

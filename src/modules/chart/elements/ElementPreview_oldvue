@@ -1,0 +1,73 @@
+<template>
+    <div class="element-preview ve-column">
+        <h5>{{elementType}}</h5>
+
+
+        <Button type="success" @click="save">Хадаглах</Button>
+
+
+        <component :is="elementType" :axis="areaLineColumnFields.axis" :lines="areaLineColumnFields.lines" :type="elementType"  :title="title"></component>
+
+        <div v-if="elementType == 'AreaChart' || elementType =='LineChart' || elementType =='ColumnChart'">
+            <AreaLine :axis="areaLineColumnFields.axis" :lines="areaLineColumnFields.lines" :type="elementType"  :title="title"></AreaLine>
+        </div>
+
+        <div v-if="elementType == 'PieChart' || elementType == 'FunnelChart' || elementType == 'TreeMapChart'"  :title="title">
+            <Pie :values="pieColumnFields.values" :type="elementType"></Pie>
+        </div>
+
+        <div v-if="elementType == 'DataTable'">
+            <TableE :values="tableFields.values" :type="elementType"  :title="title"></TableE>
+        </div>
+
+        <div v-if="elementType == 'RadarChart'">
+            <Radar :values="radarFields.values" :type="elementType"  :title="title"></Radar>
+        </div>
+    </div>
+
+</template>
+
+<script>
+
+
+    import {mapGetters} from 'vuex';
+
+
+    export default {
+        methods: {
+
+             save(){
+                 console.log('saving')
+             }
+
+        },
+        data () {
+            return {
+                title:'Нэр оруулна уу'
+            }
+        },
+        mounted(){
+
+
+        },
+        components: {
+
+            'AreaLine': () => import('./AreaLine'),
+            'Pie': () => import('./Pie'),
+            'TableE': () => import('./Table'),
+            'Radar': () => import('./Radar')
+        },
+        computed: {
+            ...mapGetters({
+                elementTypes: 'elementTypes',
+                elementType: 'elementType',
+                data: 'data',
+                areaLineColumnFields: 'areaLineColumnFields',
+                pieColumnFields: 'pieColumnFields',
+                tableFields: 'tableFields',
+                radarFields: 'radarFields',
+            })
+        },
+
+    }
+</script>

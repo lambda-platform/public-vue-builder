@@ -1,0 +1,335 @@
+$primary: #7f8fa6;
+$text-color: #001E35;
+
+.no-animation {
+    transition: all 0s !important;
+
+    .ivu-poptip-popper {
+        transition: all 0s !important;
+    }
+}
+
+.user-control {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-left: solid 1px #dedede;
+    > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: 100%;
+
+        > li {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+
+            > a,
+            .ivu-poptip-rel > a,
+            .ivu-badge > a {
+                height: 100%;
+                min-width: 42px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                i {
+                    color: $text-color;
+                    line-height: 42px;
+                    font-size: 22px;
+                }
+
+                &:hover {
+                    i,
+                    span {
+                        color: $primary;
+                    }
+                }
+            }
+
+            &:last-child {
+                border-right: 0;
+            }
+
+            &.app-switcher-item {
+                .header-apps {
+                    width: 230px;
+                    padding: 0 0 10px 0;
+
+                    .ivu-col {
+                        padding: 10px 0;
+
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            border-radius: 3px;
+                            height: 90px;
+                            width: 75px;
+                            color: #737373;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid transparent;
+
+                            &:hover {
+                                border: 1px solid #eeeeee;
+                            }
+
+                            img {
+                                height: 35px;
+                                max-height: 35px;
+                                max-width: 35px;
+                                margin-bottom: 8px;
+                            }
+
+                            span {
+                                display: block;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                font-size: 12px;
+                                color: #555555;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.paper-notification {
+                padding: 0 8px;
+
+                a {
+                    .ivu-badge {
+                        .ivu-badge-count {
+                            top: 0 !important;
+                        }
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .ivu-poptip-content {
+                    padding: 0;
+
+                    .ivu-poptip-arrow {
+                        border-bottom-color: #7f8fa6;
+
+                        &:after {
+                            border-bottom-color: #7f8fa6;
+                        }
+                    }
+
+                    .ivu-poptip-body {
+                        padding: 0 !important;
+                        width: 300px;
+
+                        .header-notification-info {
+                            background: #7f8fa6;
+                            padding: 8px 16px;
+                            border-top-left-radius: 3px;
+                            border-top-right-radius: 3px;
+                            color: #ffffff;
+
+                            h3 {
+                                font-size: 11px;
+                                font-weight: 500;
+                                text-transform: uppercase;
+
+                            }
+                        }
+
+                        ul {
+                            max-height: 300px;
+                            overflow-y: auto;
+                            display: block;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+
+                            li {
+                                border-bottom: dotted 1px #dddddd;
+                                background: #f3f4f5;
+
+                                &.seen {
+                                    background: #ffffff !important;
+                                }
+
+                                &:last-child {
+                                    border-bottom: 0;
+                                }
+
+                                a.notif-item {
+                                    padding: 6px 12px;
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    &:hover {
+                                        background: #f4f5f6;
+                                    }
+
+                                    .notif-title {
+                                        color: $primary;
+                                        white-space: normal;
+                                    }
+
+                                    .notif-content {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        a {
+                                            flex: 1;
+                                            color: #555555;
+                                        }
+
+                                        span {
+                                            margin-left: auto;
+                                            font-size: 10px;
+                                            color: #777777;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .no-notifs {
+                            height: 200px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            color: $primary;
+                        }
+
+                        .all-notif {
+                            display: flex;
+                            border-top: solid 1px #dedede;
+                            color: $primary;
+                            align-items: center;
+                            justify-content: flex-end;
+                            padding: 8px 12px;
+                            cursor: pointer;
+                            font-weight: 500;
+
+                            span {
+                                margin-right: 5px;
+                            }
+
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.avatar-item {
+                .avatar {
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    img {
+                        max-height: 40px;
+                        max-width: 40px;
+                        border-radius: 50%;
+                        margin: 0 10px 0 5px;
+                        border: solid 1px transparent;
+                    }
+
+                    .avatar-name{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        height: 100%;
+                    }
+
+                    span {
+                        color: $text-color;
+                        font-size: 11px;
+                        text-transform: capitalize;
+                    }
+
+                    b{
+                        font-size: 12px;
+                        margin-top: -3px;
+                        font-weight: 500;
+                    }
+                    &:hover{
+                    }
+                }
+
+                .ivu-poptip-content {
+                    padding: 0;
+
+                    .ivu-poptip-arrow {
+                        border-bottom-color: $primary;
+
+                        &:after {
+                            border-bottom-color: $primary;
+                        }
+                    }
+
+                    .ivu-poptip-body {
+                        padding: 0 !important;
+                        width: 200px;
+
+                        .header-profile {
+                            padding: 0 0 5px;
+
+                            &-info {
+                                background: $primary;
+                                padding: 8px 16px;
+                                border-top-left-radius: 3px;
+                                border-top-right-radius: 3px;
+                                color: #ffffff;
+                                margin-bottom: 10px;
+
+                                h3 {
+                                    font-size: 14px;
+                                    max-width: 100%;
+                                    overflow: hidden;
+                                }
+
+                                small {
+                                    font-size: 11px;
+                                }
+                            }
+
+                            ul {
+                                li {
+                                    a {
+                                        display: flex;
+                                        align-items: center;
+                                        padding: 0 16px;
+                                        color: #555555;
+                                        width: 200px;
+                                        justify-content: left;
+                                        cursor: pointer;
+                                        height: 42px;
+                                        min-width: 42px;
+                                        text-align: center;
+
+                                        i {
+                                            width: 20px;
+                                            margin-right: 8px;
+                                            color: $text-color;
+                                            line-height: 42px;
+                                            font-size: 22px;
+                                        }
+
+                                        &:hover {
+                                            background: #f4f5f6;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

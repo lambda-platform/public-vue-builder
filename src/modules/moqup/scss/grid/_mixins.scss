@@ -1,0 +1,101 @@
+@mixin btn-shoelace() {}
+
+@mixin clearfix() {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+@mixin list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+@mixin border-radius($radius: 1px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin gray($percent) {
+    color: hsl(0, 0%, ($percent));
+}
+
+@mixin ul-inline-no-style() {
+    margin: 0px;
+    list-style: none;
+    @include clearfix;
+    li {
+        float: left;
+        display: block;
+    }
+}
+
+@mixin ul-block-no-style() {
+    margin: 0px;
+    list-style: none;
+    @include clearfix;
+}
+
+// 1 pixel black and white text shadows
+@mixin textShadowBlack($shadow) {
+    text-shadow: 0 1px 1px hsla(0, 0%, 0%, $shadow);
+}
+
+@mixin textShadowWhite($shadow: 0 1px 0px hsla(0, 0%, 100%, 0.8)) {
+    text-shadow: $shadow;
+}
+
+// easy background image mixin
+@mixin bgi($src, $xpos: 0, $ypos: 0, $repeat: no-repeat) {
+    background-image: url($src);
+    background-position: $xpos $ypos;
+    background-attachment: scroll;
+    background-repeat: $repeat;
+}
+
+// Background-cover mixin yay
+@mixin background-cover($cover: cover) {
+    -webkit-background-size: $cover;
+    -moz-background-size: $cover;
+    -o-background-size: $cover;
+    background-size: $cover;
+}
+
+// CSS3 modern box sizing - padding is included in sum
+@mixin box-sizing($type: border-box) {
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    box-sizing: $type;
+}
+
+// the retina mixin. Goes .at2x(img/header.png, 650px, 150px).
+// Put the effective size, it goes width then height
+$highdpi: #{"(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx)"};
+@mixin at2x($path, $w: auto, $h: auto, $xpos: 0, $ypos: 0, $repeat: no-repeat, $attachment: scroll) {
+    background-image: url($path);
+    background-position: $xpos $ypos;
+    background-repeat: $repeat;
+    background-attachment: $attachment;
+}
+
+// the highlight color for the page
+@mixin highlight($backgroundColor, $textColor) {
+    ::selection,
+    -moz::selection {
+        background: $backgroundColor;
+        color: $textColor;
+    }
+}
+
+@include highlight(hsl(207, 100%, 52%), $white);
+@mixin noselect() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
